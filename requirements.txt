@@ -1,0 +1,6 @@
+datasets
+pandas
+torch
+transformers
+thefuzz
+anytree
