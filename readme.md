@@ -11,3 +11,5 @@ Download [requirements.txt](requirements.txt) and install all dependencies with 
 
     pip install -r requirements.txt
 
+Follow this [link](https://drive.google.com/file/d/1CpP-65VmASIhNM8jCPOo5AMzaJ5DgUa1/view?usp=sharing) for the presentation slides.
+

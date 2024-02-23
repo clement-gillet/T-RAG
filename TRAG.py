@@ -131,6 +131,7 @@ ds_with_embeddings = ds.map(lambda example: {'embeddings': ctx_encoder(**ctx_tok
 
 ds_with_embeddings.save_to_disk('/Users/clementgillet/Desktop/ESGdataset')
 
+#FAISS will allow similarity search at the retriever stage
 ds_with_embeddings.add_faiss_index(column='embeddings')
 ds_with_embeddings.save_faiss_index('embeddings', '/Users/clementgillet/Desktop/my_index.faiss')
 dataset = ds_with_embeddings
@@ -196,6 +197,7 @@ mentioned_entities = doc.ents
 
 # Custom way before training a spacy model to detect. It's based in fuzzy matching
 # List up all elements of the tree
+#itertools is used here to flatten our arrays
 allTopics = list(itertools.chain.from_iterable(allTopics))
 allSubtopics = list(itertools.chain.from_iterable(allSubtopics))
 allSubtopics = list(itertools.chain.from_iterable(allSubtopics))
